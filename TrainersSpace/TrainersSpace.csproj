@@ -178,6 +178,7 @@
     <Content Include="Content\js\libs\modernizr-2.5.3-respond-1.1.0.min.js" />
     <Content Include="Content\js\script.js" />
     <Content Include="Content\less\bootstrap\accordion.less" />
+    <None Include="Content\less\bootstrap\addon-variables.less" />
     <Content Include="Content\less\bootstrap\alerts.less" />
     <Content Include="Content\less\bootstrap\bootstrap.less" />
     <Content Include="Content\less\bootstrap\breadcrumbs.less" />
@@ -243,6 +244,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\less\bootstrap\addon-file.less" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
