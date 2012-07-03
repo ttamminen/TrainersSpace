@@ -19,6 +19,8 @@ namespace TrainersSpace
 
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+            ValueProviderFactories.Factories.Add(new JsonValueProviderFactory());
         }
     }
 }

@@ -142,9 +142,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Api\ClientController.cs" />
+    <Compile Include="Api\RavenApiController.cs" />
     <Compile Include="CassetteConfiguration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RavenController.cs" />
+    <Compile Include="DocumentStoreHolder.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -220,6 +222,7 @@
     <Content Include="Content\less\bootstrap\wells.less" />
     <Content Include="Content\less\style.less" />
     <Content Include="Global.asax" />
+    <Content Include="Content\js\libs\knockout-2.1.0.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

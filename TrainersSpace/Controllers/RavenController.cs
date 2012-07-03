@@ -13,32 +13,9 @@ namespace TrainersSpace.Controllers
     {
         public new IDocumentSession Session { get; set; }
 
-        public static IDocumentStore documentStore;
-        public static IDocumentStore DocumentStore
-        {
-            get
-            {
-                if (documentStore != null)
-                    return documentStore;
-
-                lock (typeof(RavenController))
-                {
-                    if (documentStore != null)
-                        return documentStore;
-
-                    documentStore = new DocumentStore
-                    {
-                        ConnectionStringName = "RavenDB"
-                    }.Initialize();
-                }
-
-                return documentStore;
-            }
-        }
-
         protected override void OnActionExecuting(ActionExecutingContext filterContext)
         {
-            Session = DocumentStore.OpenSession();
+            Session = DocumentStoreHolder.DocumentStore.OpenSession();
         }
 
         protected override void OnActionExecuted(ActionExecutedContext filterContext)

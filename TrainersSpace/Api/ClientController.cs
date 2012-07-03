@@ -4,14 +4,16 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using TrainersSpace.Models;
 
 namespace TrainersSpace.Api
 {
-    public class ClientController : ApiController
+    public class ClientController : RavenApiController
     {
         // GET api/client
         public IEnumerable<string> Get()
         {
+            
             return new string[] { "value1", "value2" };
         }
 
@@ -22,13 +24,15 @@ namespace TrainersSpace.Api
         }
 
         // POST api/client
-        public void Post(string value)
+        public void Post(Client client)
         {
+            Session.Store(client);
         }
 
         // PUT api/client/5
         public void Put(int id, string value)
         {
+
         }
 
         // DELETE api/client/5

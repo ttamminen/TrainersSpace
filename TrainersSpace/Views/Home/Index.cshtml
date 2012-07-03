@@ -8,14 +8,17 @@
 <div class="row-fluid">
 
     <div class="span2">
-        <ul class="nav nav-list">
-            <li class="nav-header">Ryhmät</li>
-            <li><a href="#">Lisää</a></li>
-            <li class="nav-header">Asiakkaat</li>
-            <li><a href="#">Lisää</a></li>
-            <li class="nav-header">Mittaukset</li>
-            <li><a href="#">Kehonkoostumusmittaus</a></li>
-        </ul>
+        <div id="client-container" data-bind="foreach: clients">
+            <div>
+                <span data-bind="text: name"></span>
+            </div>
+        </div>
+        <form class="well form-inline">
+            <input type="text" class="input-small" placeholder="Name">
+                <label class="checkbox">
+            </label>
+            <button type="submit" data-bind="enable: validName" class="btn">Add client</button>
+        </form>
     </div>
 
 </div>
