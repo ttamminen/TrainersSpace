@@ -21,7 +21,7 @@
             return false;
         });
 
-        self.addClient = function () { 
+        self.addClient = function () {           
             self.clients.push(new Client(self.clientName())); 
         };
     };

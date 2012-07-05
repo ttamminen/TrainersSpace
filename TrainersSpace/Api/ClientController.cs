@@ -11,16 +11,15 @@ namespace TrainersSpace.Api
     public class ClientController : RavenApiController
     {
         // GET api/client
-        public IEnumerable<string> Get()
+        public IEnumerable<Client> Get()
         {
-            
-            return new string[] { "value1", "value2" };
+            return Session.Load<Client>();
         }
 
-        // GET api/client/5
-        public string Get(int id)
+        // GET api/client/name
+        public Client Get(string id)
         {
-            return "value";
+            return Session.Load<Client>("clients/" + id);
         }
 
         // POST api/client
