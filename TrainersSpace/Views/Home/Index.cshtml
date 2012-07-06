@@ -3,20 +3,31 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!-- Example row of columns -->
+<div class="row-fluid">
+</div>
 
 <div class="row-fluid">
+    <div class="span12">
+        <div class="row-fluid" id="clients-container" >
+            <ul class="thumbnails" data-bind="foreach: clients">
+                <li class="span3">
+                    <div class="thumbnail">
+                        <!--<img src="http://placehold.it/260x180" alt="">-->
+                        <img src="http://1.bp.blogspot.com/-ibYH57RE3R4/T1Iu0sesIQI/AAAAAAAAAro/HNyG6VQKCng/s1600/funny-flying-cat.jpg" />
+                        <h5 data-bind="text: name"></h5>
+                        <p>Description</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
 
-    <div class="span2">
-        <div id="client-container" data-bind="foreach: clients">
-            <div>
-                <span data-bind="text: name"></span>
+        <div class="row-fluid">
+            <div class="span4 offset8">
+                <form class="well form-inline">
+                <input type="text" data-bind="value: clientName, valueUpdate: 'afterkeydown'" class="input-small" placeholder="Name">
+                <button type="submit" data-bind="enable: validName, click: addClient" class="btn">Add client</button>
+                </form>
             </div>
         </div>
-        <form class="well form-inline">
-            <input type="text" data-bind="value: clientName, valueUpdate: 'afterkeydown'" class="input-small" placeholder="Name">
-            <button type="submit" data-bind="enable: validName, click: addClient" class="btn">Add client</button>
-        </form>
     </div>
-
 </div>

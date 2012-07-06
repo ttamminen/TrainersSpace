@@ -21,14 +21,14 @@
             return false;
         });
 
-        self.addClient = function () {           
-            self.clients.push(new Client(self.clientName())); 
+        self.addClient = function () {            
+            self.clients.push(new Client(self.clientName()));
+            self.clientName("");
         };
     };
 
-    // check local storage for todos
-    var clients = [{ name: "Tatu" }, { name: "Tamminen" }];
+    var clients = [];
 
-        // bind a new instance of our view model to the page
+    // bind a new instance of our view model to the page
     ko.applyBindings(new ViewModel(clients || []));
 })();
