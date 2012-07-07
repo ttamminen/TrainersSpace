@@ -25,6 +25,10 @@
             self.clients.push(new Client(self.clientName()));
             self.clientName("");
         };
+
+        self.removeClient = function (client) {
+            self.clients.remove(client);
+        }
     };
 
     var clients = [];

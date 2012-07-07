@@ -4,9 +4,6 @@
 }
 
 <div class="row-fluid">
-</div>
-
-<div class="row-fluid">
     <div class="span12">
         <div class="row-fluid" id="clients-container" >
             <ul class="thumbnails" data-bind="foreach: clients">
@@ -16,7 +13,8 @@
                         <img src="http://1.bp.blogspot.com/-ibYH57RE3R4/T1Iu0sesIQI/AAAAAAAAAro/HNyG6VQKCng/s1600/funny-flying-cat.jpg" />
                         <h5 data-bind="text: name"></h5>
                         <p>Description</p>
-                    </div>
+                        <a class="btn btn-danger" data-bind="click: $parent.removeClient" href="#"><i class="icon-trash icon-white"></i> Delete</a>
+                    </div>                    
                 </li>
             </ul>
         </div>
