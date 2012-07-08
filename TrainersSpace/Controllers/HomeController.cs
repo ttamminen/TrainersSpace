@@ -14,10 +14,6 @@ namespace TrainersSpace.Controllers
 
         public ActionResult Index()
         {
-            var myClient = new Client { Age = 10, Name = "Uusi asiakas" };
-
-            Session.Store(myClient);
-
             return View();
         }
     }
