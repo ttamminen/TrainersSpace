@@ -227,9 +227,9 @@
     <Content Include="Content\less\bootstrap\accordion.less">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="Content\less\bootstrap\addon-variables.less">
+    <Content Include="Content\less\bootstrap\addon-variables.less">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    </Content>
     <Content Include="Content\less\bootstrap\alerts.less">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
