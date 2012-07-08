@@ -21,9 +21,16 @@
             return false;
         });
 
-        self.addClient = function () {            
-            self.clients.push(new Client(self.clientName()));
+        self.addClient = function () {
+            var clientName = self.clientName();
+            self.clients.push(new Client(clientName));
             self.clientName("");
+
+            $.ajax({
+                url: "/api/client",
+                data: { 'Name': clientName, 'Age': 16 },
+                type: "POST"
+            });
         };
 
         self.removeClient = function (client) {
@@ -34,5 +41,12 @@
     var clients = [];
 
     // bind a new instance of our view model to the page
-    ko.applyBindings(new ViewModel(clients || []));
+    var viewModel = new ViewModel(clients || []);
+    ko.applyBindings(viewModel);
+
+    $.get("/api/client", function (clients) {
+        $.each(clients, function (idx, client) {
+            viewModel.clients.push(new Client(client.Name));
+        });
+    }, "json");
 })();

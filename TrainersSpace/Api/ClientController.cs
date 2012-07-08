@@ -13,7 +13,8 @@ namespace TrainersSpace.Api
         // GET api/client
         public IEnumerable<Client> Get()
         {
-            return Session.Load<Client>();
+            var results = Session.Query<Client>().ToList();
+            return results;
         }
 
         // GET api/client/name
