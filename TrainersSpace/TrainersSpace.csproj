@@ -221,7 +221,9 @@
     <Content Include="Content\less\bootstrap\utilities.less" />
     <Content Include="Content\less\bootstrap\variables.less" />
     <Content Include="Content\less\bootstrap\wells.less" />
-    <Content Include="Content\less\style.less" />
+    <Content Include="Content\less\style.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Global.asax" />
     <Content Include="Content\js\libs\knockout-2.1.0.js" />
     <Content Include="Web.config">
