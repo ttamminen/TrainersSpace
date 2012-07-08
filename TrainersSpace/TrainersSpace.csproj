@@ -42,9 +42,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AjaxMin, Version=4.56.4560.33404, Culture=neutral, PublicKeyToken=21ef50ce11b5d80f, processorArchitecture=MSIL">
+    <Reference Include="AjaxMin, Version=4.58.4566.27257, Culture=neutral, PublicKeyToken=21ef50ce11b5d80f, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\AjaxMin.4.56.4560.33404\lib\net20\AjaxMin.dll</HintPath>
+      <HintPath>..\packages\AjaxMin.4.58.4566.27257\lib\net20\AjaxMin.dll</HintPath>
     </Reference>
     <Reference Include="Cassette, Version=2.0.0.17340, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -70,11 +70,14 @@
     </Reference>
     <Reference Include="Raven.Abstractions, Version=1.2.0.0, Culture=neutral, PublicKeyToken=37f41c7f99471593, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\RavenDB.Client.1.2.2025-Unstable\lib\net40\Raven.Abstractions.dll</HintPath>
+      <HintPath>..\packages\RavenDB.Client.1.2.2032-Unstable\lib\net40\Raven.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="Raven.Client.Lightweight, Version=1.2.0.0, Culture=neutral, PublicKeyToken=37f41c7f99471593, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\RavenDB.Client.1.2.2025-Unstable\lib\net40\Raven.Client.Lightweight.dll</HintPath>
+      <HintPath>..\packages\RavenDB.Client.1.2.2032-Unstable\lib\net40\Raven.Client.Lightweight.dll</HintPath>
+    </Reference>
+    <Reference Include="Raven.Imports.SignalR.Client">
+      <HintPath>..\packages\RavenDB.Client.1.2.2032-Unstable\lib\net40\Raven.Imports.SignalR.Client.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
@@ -157,75 +160,200 @@
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Content Include="Content\img\glyphicons-halflings-white.png" />
-    <Content Include="Content\img\glyphicons-halflings.png" />
-    <Content Include="Content\img\PV_Logo_Web.png" />
-    <Content Include="Content\js\libs\bootstrap\alert.js" />
-    <Content Include="Content\js\libs\bootstrap\bootstrap.js" />
+    <Content Include="Content\img\glyphicons-halflings-white.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\img\glyphicons-halflings.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\img\PV_Logo_Web.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\js\libs\bootstrap\alert.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\js\libs\bootstrap\bootstrap.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\js\libs\bootstrap\bootstrap.min.js">
       <DependentUpon>bootstrap.js</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\js\libs\bootstrap\button.js" />
-    <Content Include="Content\js\libs\bootstrap\carousel.js" />
-    <Content Include="Content\js\libs\bootstrap\collapse.js" />
-    <Content Include="Content\js\libs\bootstrap\dropdown.js" />
-    <Content Include="Content\js\libs\bootstrap\modal.js" />
-    <Content Include="Content\js\libs\bootstrap\popover.js" />
-    <Content Include="Content\js\libs\bootstrap\scrollspy.js" />
-    <Content Include="Content\js\libs\bootstrap\tab.js" />
-    <Content Include="Content\js\libs\bootstrap\tooltip.js" />
-    <Content Include="Content\js\libs\bootstrap\transition.js" />
-    <Content Include="Content\js\libs\bootstrap\typeahead.js" />
-    <Content Include="Content\js\libs\jquery-1.7.2.min.js" />
-    <Content Include="Content\js\libs\less-1.3.0.min.js" />
-    <Content Include="Content\js\libs\modernizr-2.5.3-respond-1.1.0.min.js" />
-    <Content Include="Content\js\script.js" />
-    <Content Include="Content\less\bootstrap\accordion.less" />
-    <None Include="Content\less\bootstrap\addon-variables.less" />
-    <Content Include="Content\less\bootstrap\alerts.less" />
-    <Content Include="Content\less\bootstrap\bootstrap.less" />
-    <Content Include="Content\less\bootstrap\breadcrumbs.less" />
-    <Content Include="Content\less\bootstrap\button-groups.less" />
-    <Content Include="Content\less\bootstrap\buttons.less" />
-    <Content Include="Content\less\bootstrap\carousel.less" />
-    <Content Include="Content\less\bootstrap\close.less" />
-    <Content Include="Content\less\bootstrap\code.less" />
-    <Content Include="Content\less\bootstrap\component-animations.less" />
-    <Content Include="Content\less\bootstrap\dropdowns.less" />
-    <Content Include="Content\less\bootstrap\forms.less" />
-    <Content Include="Content\less\bootstrap\grid.less" />
-    <Content Include="Content\less\bootstrap\hero-unit.less" />
-    <Content Include="Content\less\bootstrap\labels-badges.less" />
-    <Content Include="Content\less\bootstrap\layouts.less" />
-    <Content Include="Content\less\bootstrap\mixins.less" />
-    <Content Include="Content\less\bootstrap\modals.less" />
-    <Content Include="Content\less\bootstrap\navbar.less" />
-    <Content Include="Content\less\bootstrap\navs.less" />
-    <Content Include="Content\less\bootstrap\pager.less" />
-    <Content Include="Content\less\bootstrap\pagination.less" />
-    <Content Include="Content\less\bootstrap\popovers.less" />
-    <Content Include="Content\less\bootstrap\progress-bars.less" />
-    <Content Include="Content\less\bootstrap\reset.less" />
-    <Content Include="Content\less\bootstrap\responsive-1200px-min.less" />
-    <Content Include="Content\less\bootstrap\responsive-767px-max.less" />
-    <Content Include="Content\less\bootstrap\responsive-768px-979px.less" />
-    <Content Include="Content\less\bootstrap\responsive-navbar.less" />
-    <Content Include="Content\less\bootstrap\responsive-utilities.less" />
-    <Content Include="Content\less\bootstrap\responsive.less" />
-    <Content Include="Content\less\bootstrap\scaffolding.less" />
-    <Content Include="Content\less\bootstrap\sprites.less" />
-    <Content Include="Content\less\bootstrap\tables.less" />
-    <Content Include="Content\less\bootstrap\thumbnails.less" />
-    <Content Include="Content\less\bootstrap\tooltip.less" />
-    <Content Include="Content\less\bootstrap\type.less" />
-    <Content Include="Content\less\bootstrap\utilities.less" />
-    <Content Include="Content\less\bootstrap\variables.less" />
-    <Content Include="Content\less\bootstrap\wells.less" />
+    <Content Include="Content\js\libs\bootstrap\button.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\js\libs\bootstrap\carousel.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\js\libs\bootstrap\collapse.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\js\libs\bootstrap\dropdown.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\js\libs\bootstrap\modal.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\js\libs\bootstrap\popover.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\js\libs\bootstrap\scrollspy.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\js\libs\bootstrap\tab.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\js\libs\bootstrap\tooltip.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\js\libs\bootstrap\transition.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\js\libs\bootstrap\typeahead.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\js\libs\jquery-1.7.2.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\js\libs\less-1.3.0.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\js\libs\modernizr-2.5.3-respond-1.1.0.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\js\script.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\less\bootstrap\accordion.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Content\less\bootstrap\addon-variables.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Content\less\bootstrap\alerts.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\less\bootstrap\bootstrap.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\less\bootstrap\breadcrumbs.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\less\bootstrap\button-groups.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\less\bootstrap\buttons.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\less\bootstrap\carousel.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\less\bootstrap\close.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\less\bootstrap\code.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\less\bootstrap\component-animations.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\less\bootstrap\dropdowns.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\less\bootstrap\forms.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\less\bootstrap\grid.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\less\bootstrap\hero-unit.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\less\bootstrap\labels-badges.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\less\bootstrap\layouts.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\less\bootstrap\mixins.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\less\bootstrap\modals.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\less\bootstrap\navbar.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\less\bootstrap\navs.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\less\bootstrap\pager.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\less\bootstrap\pagination.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\less\bootstrap\popovers.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\less\bootstrap\progress-bars.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\less\bootstrap\reset.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\less\bootstrap\responsive-1200px-min.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\less\bootstrap\responsive-767px-max.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\less\bootstrap\responsive-768px-979px.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\less\bootstrap\responsive-navbar.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\less\bootstrap\responsive-utilities.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\less\bootstrap\responsive.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\less\bootstrap\scaffolding.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\less\bootstrap\sprites.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\less\bootstrap\tables.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\less\bootstrap\thumbnails.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\less\bootstrap\tooltip.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\less\bootstrap\type.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\less\bootstrap\utilities.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\less\bootstrap\variables.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\less\bootstrap\wells.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\less\style.less">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Global.asax" />
-    <Content Include="Content\js\libs\knockout-2.1.0.js" />
+    <Content Include="Content\js\libs\knockout-2.1.0.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -252,7 +380,9 @@
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\less\bootstrap\addon-file.less" />
+    <Content Include="Content\less\bootstrap\addon-file.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
