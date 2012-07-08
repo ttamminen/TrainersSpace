@@ -1,4 +1,4 @@
-using Cassette;
+﻿using Cassette;
 using Cassette.Scripts;
 using Cassette.Stylesheets;
 
