@@ -1,4 +1,4 @@
-(function() {
+(function () {
     // represent a single client item
     var Client = function (name) {
         this.name = ko.observable(name);
@@ -35,18 +35,23 @@
 
         self.removeClient = function (client) {
             self.clients.remove(client);
-        }
+
+            $.ajax({
+                url: '/api/client/' + client.name(),
+                type: 'DELETE'
+            });
+        };
     };
 
-    var clients = [];
+    var initialClients = [];
 
     // bind a new instance of our view model to the page
-    var viewModel = new ViewModel(clients || []);
+    var viewModel = new ViewModel(initialClients || []);
     ko.applyBindings(viewModel);
 
-    $.get("/api/client", function (clients) {
-        $.each(clients, function (idx, client) {
+    $.get('/api/client', function (data) {
+        $.each(data, function (idx, client) {
             viewModel.clients.push(new Client(client.Name));
         });
-    }, "json");
+    }, 'json');
 })();

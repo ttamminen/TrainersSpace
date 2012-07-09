@@ -30,14 +30,17 @@ namespace TrainersSpace.Api
         }
 
         // PUT api/client/5
-        public void Put(int id, string value)
+        public void Put(string id, string name)
         {
-
+            var client = Session.Load<Client>("clients/" + id);
+            client.Name = name;
         }
 
         // DELETE api/client/5
-        public void Delete(int id)
+        public void Delete(string id)
         {
+            var client = Session.Load<Client>("clients/" + id);
+            Session.Delete(client);
         }
     }
 }
