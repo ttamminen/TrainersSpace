@@ -13,8 +13,7 @@ namespace TrainersSpace
         {
             // Call bundles.Add methods here, same as in v1
             bundles.AddPerSubDirectory<ScriptBundle>("Content/js");
-            bundles.Add<StylesheetBundle>("Content/less/style.less");
-            //bundles.Add<StylesheetBundle>("Content/less/bootstrap/bootstrap.less");
+            bundles.Add<StylesheetBundle>("Content/less/style.less");            
         }
     }
 }
