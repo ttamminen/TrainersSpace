@@ -6,6 +6,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 
 using System.Web.Routing;
+using Newtonsoft.Json.Serialization;
 
 namespace TrainersSpace
 {
@@ -20,6 +21,9 @@ namespace TrainersSpace
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
 
+            var json = GlobalConfiguration.Configuration.Formatters.JsonFormatter;
+            json.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            
             ValueProviderFactories.Factories.Add(new JsonValueProviderFactory());
         }
     }

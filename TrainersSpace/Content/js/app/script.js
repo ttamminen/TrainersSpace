@@ -1,6 +1,7 @@
 (function () {
     // represent a single client item
     var Client = function (name) {
+        this.id = "";
         this.name = ko.observable(name);
     };
 
@@ -23,22 +24,30 @@
 
         self.addClient = function () {
             var clientName = self.clientName();
-            self.clients.push(new Client(clientName));
-            self.clientName("");
 
             $.ajax({
                 url: "/api/client",
-                data: { 'Name': clientName, 'Age': 16 },
-                type: "POST"
+                data: { 'name': clientName, 'age': 16 },
+                type: 'POST',
+                statusCode: {
+                    201: function (data) {
+                        self.clients.push(new Client(clientName));
+                        self.clientName('');
+                    }
+                }
             });
         };
 
-        self.removeClient = function (client) {
-            self.clients.remove(client);
-
+        self.removeClient = function (client) {           
             $.ajax({
                 url: '/api/client/' + client.name(),
-                type: 'DELETE'
+                type: 'DELETE',
+                cache: false,
+                statusCode: {
+                    200: function (data) {
+                        self.clients.remove(client);
+                    }
+                }
             });
         };
     };
@@ -51,7 +60,7 @@
 
     $.get('/api/client', function (data) {
         $.each(data, function (idx, client) {
-            viewModel.clients.push(new Client(client.Name));
+            viewModel.clients.push(new Client(client.name));
         });
     }, 'json');
 })();

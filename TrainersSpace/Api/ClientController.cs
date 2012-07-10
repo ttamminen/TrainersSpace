@@ -24,9 +24,15 @@ namespace TrainersSpace.Api
         }
 
         // POST api/client
-        public void Post(Client client)
+        public HttpResponseMessage Post(Client client)
         {
             Session.Store(client);
+
+            var response = Request.CreateResponse<Client>(HttpStatusCode.Created, client);
+
+            string uri = Url.Link("DefaultApi", new { id = client.Name });
+            response.Headers.Location = new Uri(uri);
+            return response;
         }
 
         // PUT api/client/5
@@ -37,10 +43,16 @@ namespace TrainersSpace.Api
         }
 
         // DELETE api/client/5
-        public void Delete(string id)
+        public HttpResponseMessage Delete(string id)
         {
             var client = Session.Load<Client>("clients/" + id);
+            if (client == null)
+            {
+                var response = Request.CreateResponse<string>(HttpStatusCode.NotFound, id);
+                return response;
+            }
             Session.Delete(client);
+            return Request.CreateResponse<Client>(HttpStatusCode.OK, client);
         }
     }
 }
